@@ -1,0 +1,289 @@
+[
+  {
+    "section": "Movies Released in 2025",
+    "movies": [
+      {
+        "name": "The Fantastic Four: First Steps",
+        "cast": [
+          { "name": "Pedro Pascal", "role": "Reed Richards / Mister Fantastic", "image": "pedro_pascal" },
+          { "name": "Vanessa Kirby", "role": "Sue Storm / Invisible Woman", "image": "vanessa_kirby" },
+          { "name": "Joseph Quinn", "role": "Johnny Storm / Human Torch", "image": "joseph_quinn" },
+          { "name": "Ebon Moss‑Bachrach", "role": "Ben Grimm / The Thing", "image": "ebon_moss_bachrach" },
+          { "name": "Julia Garner", "role": "Shalla‑Bal / Silver Surfer", "image": "julia_garner" }
+        ],
+        "poster": "fantastic_four_first_steps",
+        "image": "fantastic_four_first_steps_image",
+        "director": "Matt Shakman",
+        "year": "2025",
+        "duration": "135 min",
+        "description": "Marvel Studios’ first Fantastic Four film in the MCU, introducing the iconic team without redoing the origin story."
+      },
+      {
+        "name": "Mission: Impossible – The Final Reckoning",
+        "cast": [
+          { "name": "Tom Cruise", "role": "Ethan Hunt", "image": "tom_cruise" },
+          { "name": "Hayley Atwell", "role": "Grace", "image": "hayley_atwell" },
+          { "name": "Simon Pegg", "role": "Benji Dunn", "image": "simon_pegg" },
+          { "name": "Ving Rhames", "role": "Luther Stickell", "image": "ving_rhames" },
+          { "name": "Esai Morales", "role": "Gabriel", "image": "esai_morales" }
+        ],
+        "poster": "mission_impossible_final_reckoning",
+        "image": "mission_impossible_final_reckoning_image",
+        "director": "Christopher McQuarrie",
+        "year": "2025",
+        "duration": "145 min",
+        "description": "Tom Cruise returns as Ethan Hunt in the climactic chapter of the Mission Impossible saga."
+      },
+      {
+        "name": "Superman",
+        "cast": [
+          { "name": "David Corenswet", "role": "Clark Kent / Superman", "image": "david_corenswet" },
+          { "name": "Rachel Brosnahan", "role": "Lois Lane", "image": "rachel_brosnahan" },
+          { "name": "Nicholas Hoult", "role": "Lex Luthor", "image": "nicholas_hoult" },
+          { "name": "Alan Tudyk", "role": "Gary", "image": "alan_tudyk" },
+          { "name": "Grace Chan", "role": "Superman Robot #12", "image": "grace_chan" }
+        ],
+        "poster": "superman_2025",
+        "image": "superman_2025_image",
+        "director": "James Gunn",
+        "year": "2025",
+        "duration": "130 min",
+        "description": "The first film in James Gunn’s DC Universe, presenting a younger Superman learning to balance humanity and heroism."
+      },
+      {
+        "name": "Lilo & Stitch",
+        "cast": [
+          { "name": "Sydney Elizebeth Agudong", "role": "Lilo", "image": "sydney_elizebeth_agudong" },
+          { "name": "Billy Magnussen", "role": "David Kawena", "image": "billy_magnussen" },
+          { "name": "Hannah Waddingham", "role": "Captain Gantu", "image": "hannah_waddingham" },
+          { "name": "Marcus Scribner", "role": "Nani", "image": "marcus_scribner" },
+          { "name": "Alan Tudyk", "role": "Stitch", "image": "alan_tudyk" }
+        ],
+        "poster": "lilo_and_stitch",
+        "image": "lilo_and_stitch_image",
+        "director": "Dean Fleischer Camp",
+        "year": "2025",
+        "duration": "105 min",
+        "description": "A live-action / animated remake of Disney’s 2002 film, reimagined with new supporting roles and effects."
+      },
+      {
+        "name": "How to Train Your Dragon",
+        "cast": [
+          { "name": "TBA", "role": "Hiccup", "image": "tba" },
+          { "name": "TBA", "role": "Toothless", "image": "tba" },
+          { "name": "TBA", "role": "Astrid", "image": "tba" },
+          { "name": "TBA", "role": "Stoick", "image": "tba" },
+          { "name": "TBA", "role": "Gobber", "image": "tba" }
+        ],
+        "poster": "how_to_train_your_dragon_2025",
+        "image": "how_to_train_your_dragon_2025_image",
+        "director": "TBA",
+        "year": "2025",
+        "duration": "120 min",
+        "description": "Live-action remake of the animated trilogy, featuring the return of Hiccup and Toothless in full cinematic scale."
+      }
+    ]
+  },
+  {
+    "section": "Most Popular Movies",
+    "movies": [
+      {
+        "name": "Ne Zha 2",
+        "cast": [
+          { "name": "TBA", "role": "Ne Zha", "image": "tba" },
+          { "name": "TBA", "role": "Ao Bing", "image": "tba" },
+          { "name": "TBA", "role": "Shen Gongbao", "image": "tba" },
+          { "name": "TBA", "role": "Li Jing", "image": "tba" },
+          { "name": "TBA", "role": "Lady Yin", "image": "tba" }
+        ],
+        "poster": "ne_zha_2",
+        "image": "ne_zha_2_image",
+        "director": "TBA",
+        "year": "2025",
+        "duration": "118 min",
+        "description": "One of the highest grossing films worldwide for 2025, topping global box office."
+      },
+      {
+        "name": "A Minecraft Movie",
+        "cast": [
+          { "name": "Jensen Ackles", "role": "Steve", "image": "jensen_ackles" },
+          { "name": "Ellie Bamber", "role": "Alex", "image": "ellie_bamber" },
+          { "name": "Malcolm McDowell", "role": "Enderman", "image": "malcolm_mcdowell" },
+          { "name": "Peter Dinklage", "role": "Villager", "image": "peter_dinklage" },
+          { "name": "Awkwafina", "role": "Creeper", "image": "awkwafina" }
+        ],
+        "poster": "a_minecraft_movie",
+        "image": "a_minecraft_movie_image",
+        "director": "Jared Hess",
+        "year": "2025",
+        "duration": "110 min",
+        "description": "Massive box-office success and a big hit among audiences globally."
+      },
+      {
+        "name": "Jurassic World: Rebirth",
+        "cast": [
+          { "name": "Scarlett Johansson", "role": "Zora Bennett", "image": "scarlett_johansson" },
+          { "name": "Mahershala Ali", "role": "Duncan Kincaid", "image": "mahershala_ali" },
+          { "name": "Jonathan Bailey", "role": "Dr. Henry Loomis", "image": "jonathan_bailey" },
+          { "name": "Rupert Friend", "role": "Martin Krebs", "image": "rupert_friend" },
+          { "name": "Manuel Garcia‑Rulfo", "role": "Reuben Delgado", "image": "manuel_garcia_rulfo" }
+        ],
+        "poster": "jurassic_world_rebirth",
+        "image": "jurassic_world_rebirth_image",
+        "director": "Gareth Edwards",
+        "year": "2025",
+        "duration": "140 min",
+        "description": "Another blockbuster of 2025 with large global revenue."
+      },
+      {
+        "name": "Avatar: The Way of Water",
+        "cast": [
+          { "name": "Sam Worthington", "role": "Jake Sully", "image": "sam_worthington" },
+          { "name": "Zoe Saldaña", "role": "Neytiri", "image": "zoe_saldana" },
+          { "name": "Sigourney Weaver", "role": "Kiri", "image": "sigourney_weaver" },
+          { "name": "Stephen Lang", "role": "Colonel Quaritch", "image": "stephen_lang" },
+          { "name": "Kate Winslet", "role": "Ronal", "image": "kate_winslet" }
+        ],
+        "poster": "avatar_the_way_of_water",
+        "image": "avatar_the_way_of_water_image",
+        "director": "James Cameron",
+        "year": "2022",
+        "duration": "192 min",
+        "description": "Sequel to Avatar, visually spectacular and one of the top-grossing films worldwide."
+      },
+      {
+        "name": "Top Gun: Maverick",
+        "cast": [
+          { "name": "Tom Cruise", "role": "Pete 'Maverick' Mitchell", "image": "tom_cruise" },
+          { "name": "Miles Teller", "role": "Bradley 'Rooster' Bradshaw", "image": "miles_teller" },
+          { "name": "Jennifer Connelly", "role": "Penny Benjamin", "image": "jennifer_connelly" },
+          { "name": "Jon Hamm", "role": "Vice Admiral Cyclone", "image": "jon_hamm" },
+          { "name": "Glen Powell", "role": "Hangman", "image": "glen_powell" }
+        ],
+        "poster": "top_gun_maverick",
+        "image": "top_gun_maverick_image",
+        "director": "Joseph Kosinski",
+        "year": "2022",
+        "duration": "131 min",
+        "description": "Sequel to the 1986 classic, featuring high-adrenaline aerial sequences."
+      }
+    ]
+  },
+  {
+    "section": "Top 10 IMDb Movies",
+    "movies": [
+      {
+        "name": "The Shawshank Redemption",
+        "cast": [
+          { "name": "Tim Robbins", "role": "Andy Dufresne", "image": "tim_robbins" },
+          { "name": "Morgan Freeman", "role": "Ellis Boyd 'Red' Redding", "image": "morgan_freeman" },
+          { "name": "Bob Gunton", "role": "Warden Norton", "image": "bob_gunton" },
+          { "name": "William Sadler", "role": "Heywood", "image": "william_sadler" },
+          { "name": "Clancy Brown", "role": "Captain Hadley", "image": "clancy_brown" }
+        ],
+        "poster": "shawshank_redemption",
+        "image": "shawshank_redemption_image",
+        "director": "Frank Darabont",
+        "year": "1994",
+        "duration": "142 min",
+        "description": "A timeless story of hope and perseverance, frequently ranked #1 on IMDb."
+      },
+      {
+        "name": "The Godfather",
+        "cast": [
+          { "name": "Marlon Brando", "role": "Vito Corleone", "image": "marlon_brando" },
+          { "name": "Al Pacino", "role": "Michael Corleone", "image": "al_pacino" },
+          { "name": "James Caan", "role": "Sonny Corleone", "image": "james_caan" },
+          { "name": "Diane Keaton", "role": "Kay Adams", "image": "diane_keaton" },
+          { "name": "Richard S. Castellano", "role": "Clemenza", "image": "richard_s_castellano" }
+        ],
+        "poster": "godfather",
+        "image": "godfather_image",
+        "director": "Francis Ford Coppola",
+        "year": "1972",
+        "duration": "175 min",
+        "description": "A mafia epic chronicling the rise of the Corleone family."
+      },
+      {
+        "name": "The Dark Knight",
+        "cast": [
+          { "name": "Christian Bale", "role": "Bruce Wayne / Batman", "image": "christian_bale" },
+          { "name": "Heath Ledger", "role": "The Joker", "image": "heath_ledger" },
+          { "name": "Aaron Eckhart", "role": "Harvey Dent / Two-Face", "image": "aaron_eckhart" },
+          { "name": "Michael Caine", "role": "Alfred Pennyworth", "image": "michael_caine" },
+          { "name": "Maggie Gyllenhaal", "role": "Rachel Dawes", "image": "maggie_gyllenhaal" }
+        ],
+        "poster": "the_dark_knight",
+        "image": "the_dark_knight_image",
+        "director": "Christopher Nolan",
+        "year": "2008",
+        "duration": "152 min",
+        "description": "One of the most acclaimed superhero films ever, led by Heath Ledger’s legendary performance."
+      },
+      {
+        "name": "Schindler's List",
+        "cast": [
+          { "name": "Liam Neeson", "role": "Oskar Schindler", "image": "liam_neeson" },
+          { "name": "Ben Kingsley", "role": "Itzhak Stern", "image": "ben_kingsley" },
+          { "name": "Ralph Fiennes", "role": "Amon Göth", "image": "ralph_fiennes" },
+          { "name": "Caroline Goodall", "role": "Emilie Schindler", "image": "caroline_goodall" },
+          { "name": "Jonathan Sagall", "role": "Poldek Pfefferberg", "image": "jonathan_sagall" }
+        ],
+        "poster": "schindlers_list",
+        "image": "schindlers_list_image",
+        "director": "Steven Spielberg",
+        "year": "1993",
+        "duration": "195 min",
+        "description": "A harrowing yet inspiring portrayal of Oskar Schindler’s rescue of Jews during WWII."
+      },
+      {
+        "name": "12 Angry Men",
+        "cast": [
+          { "name": "Henry Fonda", "role": "Juror #8", "image": "henry_fonda" },
+          { "name": "Lee J. Cobb", "role": "Juror #3", "image": "lee_j_cobb" },
+          { "name": "Martin Balsam", "role": "Juror #1 (Foreman)", "image": "martin_balsam" },
+          { "name": "E.G. Marshall", "role": "Juror #4", "image": "eg_marshall" },
+          { "name": "Jack Klugman", "role": "Juror #5", "image": "jack_klugman" }
+        ],
+        "poster": "12_angry_men",
+        "image": "12_angry_men_image",
+        "director": "Sidney Lumet",
+        "year": "1957",
+        "duration": "96 min",
+        "description": "A tense courtroom drama exploring justice, bias, and morality."
+      },
+      {
+        "name": "Pulp Fiction",
+        "cast": [
+          { "name": "John Travolta", "role": "Vincent Vega", "image": "john_travolta" },
+          { "name": "Samuel L. Jackson", "role": "Jules Winnfield", "image": "samuel_l_jackson" },
+          { "name": "Uma Thurman", "role": "Mia Wallace", "image": "uma_thurman" },
+          { "name": "Bruce Willis", "role": "Butch Coolidge", "image": "bruce_willis" },
+          { "name": "Ving Rhames", "role": "Marsellus Wallace", "image": "ving_rhames" }
+        ],
+        "poster": "pulp_fiction",
+        "image": "pulp_fiction_image",
+        "director": "Quentin Tarantino",
+        "year": "1994",
+        "duration": "154 min",
+        "description": "Tarantino’s masterpiece intertwining multiple stories of crime and redemption."
+      },
+      {
+        "name": "The Lord of the Rings: The Return of the King",
+        "cast": [
+          { "name": "Elijah Wood", "role": "Frodo Baggins", "image": "elijah_wood" },
+          { "name": "Ian McKellen", "role": "Gandalf", "image": "ian_mckellen" },
+          { "name": "Viggo Mortensen", "role": "Aragorn", "image": "viggo_mortensen" },
+          { "name": "Orlando Bloom", "role": "Legolas", "image": "orlando_bloom" },
+          { "name": "Liv Tyler", "role": "Arwen", "image": "liv_tyler" }
+        ],
+        "poster": "lotr_return_of_the_king",
+        "image": "lotr_return_of_the_king_image",
+        "director": "Peter Jackson",
+        "year": "2003",
+        "duration": "201 min",
+        "description": "Epic conclusion to the Lord of the Rings trilogy, critically acclaimed and awarded 11 Oscars."
+      }
+    ]
+  }
+]

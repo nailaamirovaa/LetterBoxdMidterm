@@ -7,25 +7,13 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		104931352E859729002F6A1D /* Networking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Networking.xcodeproj; sourceTree = "<group>"; };
 		10DB933E2E754F44005F2894 /* LetterBoxdMidterm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetterBoxdMidterm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		10DB93532E754F47005F2894 /* Exceptions for "LetterBoxdMidterm" folder in "LetterBoxdMidterm" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 10DB933D2E754F44005F2894 /* LetterBoxdMidterm */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		10DB93402E754F44005F2894 /* LetterBoxdMidterm */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				10DB93532E754F47005F2894 /* Exceptions for "LetterBoxdMidterm" folder in "LetterBoxdMidterm" target */,
-			);
 			path = LetterBoxdMidterm;
 			sourceTree = "<group>";
 		};
@@ -42,6 +30,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		104931372E859729002F6A1D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		10DB93352E754F44005F2894 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +105,12 @@
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 10DB933F2E754F44005F2894 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 104931372E859729002F6A1D /* Products */;
+					ProjectRef = 104931352E859729002F6A1D /* Networking.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				10DB933D2E754F44005F2894 /* LetterBoxdMidterm */,
@@ -153,6 +154,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -181,6 +183,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -17,6 +17,45 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        if UserDefaults.standard.bool(forKey: "isLoggedIn") {
+            tabbarRoot()
+        }else {
+            navToOnBoarding()
+        }
+        
+//        navToOnBoarding()
+        
+    }
+    
+    func tabbarRoot() {
+        let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController")
+        window?.rootViewController = controller
+        window?.makeKeyAndVisible()
+    }
+    
+    func navToLogin() {
+        let controller = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "LoginController")
+        window?.rootViewController = controller
+        window?.makeKeyAndVisible()
+    }
+    
+    func navToHome() {
+        let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "HomeController") as! HomeController
+        window?.rootViewController = UINavigationController(rootViewController: controller)
+        window?.makeKeyAndVisible()
+    }
+    
+    func navToRegister() {
+        let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "RegisterController") as! RegisterController
+        window?.rootViewController = UINavigationController(rootViewController: controller)
+        window?.makeKeyAndVisible()
+    }
+    
+    func navToOnBoarding() {
+        let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "OnBoardingController") as! OnBoardingController
+        window?.rootViewController = UINavigationController(rootViewController: controller)
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
