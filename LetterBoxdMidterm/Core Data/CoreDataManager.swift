@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 
 struct UserStruct {
@@ -14,16 +15,26 @@ struct UserStruct {
     var username : String
     var email : String
     var password : String
+    var favMovies : [FavoriteMovies]
 //    var watchlist
 }
+
+
+struct FavMoviesStruct {
+    var movieTitle : String
+    var userId : String
+}
+
 
 class CoreDataManager {
     
     private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var items = [User]()
+    
+    var userFavorites = [FavoriteMovies]()
 
-    func fetchItems() {
+    func fetchUserItems() {
         do {
             items = try context.fetch(User.fetchRequest())
         } catch {
@@ -31,7 +42,7 @@ class CoreDataManager {
         }
     }
     
-    func saveItem(newUser: UserStruct) {
+    func saveUserItem(newUser: UserStruct) {
         let item = User(context: context)
         item.email = newUser.email
         item.username = newUser.username
@@ -39,23 +50,23 @@ class CoreDataManager {
         
         do {
             try context.save()
-            fetchItems()
+            fetchUserItems()
         } catch {
             print(error.localizedDescription)
         }
     }
     
-    func deleteItem(index: Int) {
+    func deleteUserItem(index: Int) {
         context.delete(items[index])
         do {
             try context.save()
-            fetchItems()
+            fetchUserItems()
         } catch {
             print(error.localizedDescription)
         }
     }
     
-    func printItems() {
+    func printUserItems() {
         if items.isEmpty {
             print("No users found.")
         } else {
@@ -64,6 +75,69 @@ class CoreDataManager {
                 let email = user.email ?? "No email"
                 let password = user.password ?? "No password"
                 print("\(index + 1). Username: \(username), Email: \(email), Password: \(password)")
+            }
+        }
+    }
+    
+    func fetchFavorites(for userId: String) {
+        let request: NSFetchRequest<FavoriteMovies> = FavoriteMovies.fetchRequest()
+        request.predicate = NSPredicate(format: "user.username == %@", userId)
+        
+        do {
+            userFavorites = try context.fetch(request)
+
+        } catch {
+            print("Failed to fetch favorites: \(error.localizedDescription)")
+        }
+    }
+    
+    func saveFavoriteMovie(movieTitle: String , userId: String) {
+        
+        let userRequest: NSFetchRequest<User> = User.fetchRequest()
+        userRequest.predicate = NSPredicate(format: "username == %@", userId)
+        
+        do {
+            if let user = try context.fetch(userRequest).first {
+                let favorite = FavoriteMovies(context: context)
+                favorite.movieTitle = movieTitle
+                favorite.user = user
+                
+                try context.save()
+                
+                fetchFavorites(for: user.username ?? "")
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func deleteMovie(title : String , userId : String) {
+        
+        let movieRequest: NSFetchRequest<FavoriteMovies> = FavoriteMovies.fetchRequest()
+        movieRequest.predicate = NSPredicate(format: "user.username == %@ AND movieTitle == %@", userId ,title)
+        
+        do {
+            let favorites = try context.fetch(movieRequest)
+            for fav in favorites {
+                context.delete(fav)
+            }
+            try context.save()
+            fetchFavorites(for: userId)
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func printFavorites(for userId: String) {
+//        let favorites = fetchFavorites(for: userId)
+        
+        if userFavorites.isEmpty {
+            print("No favorites found for this user.")
+        } else {
+            print("🎬 Favorite Movies:")
+            for (index, fav) in userFavorites.enumerated() {
+                let title = fav.movieTitle ?? "Untitled"
+                print("\(index + 1). \(title)")
             }
         }
     }

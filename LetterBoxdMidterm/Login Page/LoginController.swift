@@ -19,13 +19,14 @@ class LoginController: UIViewController {
     
     var userManager = CoreDataManager()
     var user : User?
+    var userFavoriteMovies : [FavoriteMovies]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         usernameView.layer.cornerRadius = 18
         passwordView.layer.cornerRadius = 18
-        userManager.fetchItems()
-        userManager.printItems()
+        userManager.fetchUserItems()
+        userManager.printUserItems()
         loginButton.layer.cornerRadius = 15
     }    
 }
@@ -47,6 +48,8 @@ extension LoginController {
                            let homeController = navController.viewControllers.first as? HomeController {
                             homeController.username = username
                         UserDefaults.standard.set("\(username)", forKey: "username")
+                        userManager.fetchFavorites(for: username)
+                        userFavoriteMovies = userManager.userFavorites
                         }
                     if let delegate = windowScene.delegate as? SceneDelegate {
                         delegate.tabbarRoot()

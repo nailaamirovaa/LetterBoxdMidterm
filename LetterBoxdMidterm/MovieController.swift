@@ -22,16 +22,18 @@ class MovieController: UIViewController {
     
     private var movie = Movie(name: "", cast: [], poster: "", duration: "", image: "", director: "", year: "", description: "")
     
+    var coreDataManager = CoreDataManager()
+    
+    var favoriteMovies = [FavoriteMovies]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        backgroundImage.image = UIImage(named: "godfather_image")
-        print(movie.poster)
-        moviePosterImage.image = UIImage(named: movie.poster)
-        movieNameLabel.text = "\(movie.name)   \(movie.year)"
-//        movieDurationLabel.text = movie.duration
-        movieDirectorLabel.text = movie.director
-        movieDescriptionLabel.text = movie.description
+//        print(movie.name)
+        
+        configureMovieUI(movie: movie)
+        
+        addtoFavoritesButtonConfigure()
         
         castCollection.delegate = self
         castCollection.dataSource = self
@@ -46,20 +48,58 @@ class MovieController: UIViewController {
                                 forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                                 withReuseIdentifier: "CastCollectionHeader")
         
+        let userId = UserDefaults.standard.string(forKey: "username")
+        coreDataManager.fetchFavorites(for: userId ?? "")
+        favoriteMovies = coreDataManager.userFavorites
+        
     }
     
-//    @IBAction func addToFavoriteButtonTapped(_ sender: UIButton) {
-//    }
-//    
+    override func viewWillAppear(_ animated: Bool) {
+        configureMovieUI(movie: movie)
+        castCollection.reloadData()
+        addtoFavoritesButtonConfigure()
+    }
+    
+    @IBAction func addToFavoriteButtonTapped(_ sender: UIButton) {
+        
+        let userId = UserDefaults.standard.string(forKey: "username")
+        
+        if UserDefaults.standard.bool(forKey: "\(movie.name)IsAdded") {
+            UserDefaults.standard.set(false, forKey: "\(movie.name)IsAdded")
+            coreDataManager.deleteMovie(title: movie.name, userId: userId ?? "")
+            addtoFavoritesButtonConfigure()
+            coreDataManager.printFavorites(for: userId ?? "")
+        } else {
+            UserDefaults.standard.set(true, forKey: "\(movie.name)IsAdded")
+            coreDataManager.saveFavoriteMovie(movieTitle: movie.name, userId: userId ?? "")
+            coreDataManager.fetchFavorites(for: userId ?? "")
+            addtoFavoritesButtonConfigure()
+            coreDataManager.printFavorites(for: userId ?? "")
+        }
+    }
+    
     
     func getTheMovie(selectedMovie : Movie) {
         movie = selectedMovie
     }
     
     @IBAction func rateButtonTapped(_ sender: UIButton) {
+        
     }
     
-    @IBAction func addToWatchlistButtonTapped(_ sender: UIButton) {
+    @IBAction func addToWatchlistButtonTapped(_ sender:
+                                              UIButton) {
+    }
+    
+    func addtoFavoritesButtonConfigure() {
+        let isAddedTrue = UserDefaults.standard.bool(forKey: "\(movie.name)IsAdded")
+        if isAddedTrue {
+            addToFavoriteButton.setImage(UIImage(systemName: "heart.fill" ), for: .normal)
+            addToFavoriteButton.tintColor = .red
+        } else {
+            addToFavoriteButton.setImage(UIImage(systemName: "heart"), for: .normal)
+            addToFavoriteButton.tintColor = .red
+        }
     }
 }
 
@@ -111,5 +151,23 @@ extension MovieController: UICollectionViewDelegate , UICollectionViewDataSource
     @objc func seeAllTapped() {
 //        let fullCastVC = FullCastViewController()
 //        navigationController?.pushViewController(fullCastVC, animated: true)
+    }
+}
+
+
+extension MovieController {
+    
+    func configureMovieUI(movie : Movie) {
+        
+        backgroundImage.image = UIImage(named: "godfather_image")
+//        print(movie.poster)
+        
+        moviePosterImage.image = UIImage(named: movie.poster)
+        movieNameLabel.text = "\(movie.name)   \(movie.year)"
+        //       movieDurationLabel.text = movie.duration
+        
+        movieDirectorLabel.text = movie.director
+        movieDescriptionLabel.text = movie.description
+        
     }
 }

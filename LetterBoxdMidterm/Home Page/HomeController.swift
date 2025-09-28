@@ -11,20 +11,18 @@ class HomeController: UIViewController  {
     @IBOutlet weak var helloLabel: UILabel!
     @IBOutlet weak var outerCollectionView: UICollectionView!
     
-    var username = ""
+    var username = UserDefaults.standard.string(forKey: "username")
     var allMovies = [MovieSection]()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        helloLabel.text = "Hello , \(username)"
-//        view.backgroundColor = .background
+        helloLabel.text = "Hello , \(username ?? "")"
         outerCollectionView.delegate = self
         outerCollectionView.dataSource = self
         getData()
         outerCollectionView.register(UINib(nibName: "HomeCollectionCell", bundle: nil), forCellWithReuseIdentifier: "HomeCollectionCell")
     }
-
 }
 
 extension HomeController: UICollectionViewDelegate , UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -40,8 +38,8 @@ extension HomeController: UICollectionViewDelegate , UICollectionViewDataSource,
         
         let controller = storyboard?.instantiateViewController(identifier: "MovieController") as! MovieController
         cell.didSelectMovie = { movie in
-            self.navigationController?.show(controller, sender: nil)
             controller.getTheMovie(selectedMovie: movie)
+            self.navigationController?.show(controller, sender: nil)
         }
         return cell
     }
@@ -51,17 +49,7 @@ extension HomeController: UICollectionViewDelegate , UICollectionViewDataSource,
         .init(width: collectionView.bounds.width - 10 , height: collectionView.bounds.height/3 - 20 )
         
     }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let selectedCategory = menu[indexPath.row]
-//        let controller = storyboard?.instantiateViewController(identifier: "CategoryController") as! CategoryController
-//        controller.category = selectedCategory
-//        navigationController?.show(controller, sender: nil)
-    }
-    
-    
 }
-
 
 extension HomeController {
     

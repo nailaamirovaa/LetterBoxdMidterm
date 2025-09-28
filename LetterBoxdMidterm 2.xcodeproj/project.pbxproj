@@ -98,7 +98,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 10DB93392E754F44005F2894 /* Build configuration list for PBXProject "LetterBoxdMidterm" */;
+			buildConfigurationList = 10DB93392E754F44005F2894 /* Build configuration list for PBXProject "LetterBoxdMidterm 2" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -320,7 +320,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		10DB93392E754F44005F2894 /* Build configuration list for PBXProject "LetterBoxdMidterm" */ = {
+		10DB93392E754F44005F2894 /* Build configuration list for PBXProject "LetterBoxdMidterm 2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				10DB93572E754F47005F2894 /* Debug */,

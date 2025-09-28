@@ -29,7 +29,7 @@ class RegisterController: UIViewController {
         emailView.layer.cornerRadius = 18
         passwordView.layer.cornerRadius = 18
         
-        userManager.fetchItems()
+        userManager.fetchUserItems()
     }
     
     var callBack: ((String , String) -> Void)?
@@ -38,9 +38,9 @@ class RegisterController: UIViewController {
         if let username = usernameTextField.text , !username.isEmpty,
            let email = emailTextField.text , !email.isEmpty,
            let password = passwordTextField.text , !password.isEmpty {
-            let user : UserStruct = .init(username: username, email: email, password: password)
-            userManager.saveItem(newUser: user)
-            userManager.printItems()
+            let user : UserStruct = .init(username: username, email: email, password: password, favMovies: [])
+            userManager.saveUserItem(newUser: user)
+            userManager.printUserItems()
             callBack?(username , password)
             
             if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {

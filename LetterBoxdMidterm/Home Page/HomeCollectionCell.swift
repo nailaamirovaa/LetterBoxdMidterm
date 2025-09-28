@@ -13,6 +13,7 @@ class HomeCollectionCell: UICollectionViewCell {
     @IBOutlet private weak var innerCollectionView: UICollectionView!
     
     private var movies = [Movie]()
+    
     var didSelectMovie : ((Movie) -> Void)?
     
     override func awakeFromNib() {
@@ -48,8 +49,9 @@ extension HomeCollectionCell: UICollectionViewDelegate , UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        var controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MovieController") as! MovieController
+        let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MovieController") as! MovieController
         let selectedMovie = movies[indexPath.row]
+//        print(selectedMovie.name)
         controller.getTheMovie(selectedMovie: selectedMovie)
         didSelectMovie?(selectedMovie)
     }

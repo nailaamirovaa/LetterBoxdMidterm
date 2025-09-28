@@ -27,7 +27,7 @@ class ProfileController: UIViewController {
         signOutButton.layer.cornerRadius = 15
         profileImage.image = .howToTrainYourDragon
         
-        userManager.fetchItems()
+        userManager.fetchUserItems()
         if let user = userManager.items.first(where: { $0.username == username}) {
             usernameLabel.text = user.username
             emailLabel.text = user.email
