@@ -17,7 +17,10 @@ class SearchCell: UICollectionViewCell {
         
     }
     
+    var callBack : ((String) -> Void)?
+    
     func configureSearchCell(image : String , label : String) {
+        callBack?(label)
         cellLabel.text = label
         cellImage.image = UIImage(named: image)
     }

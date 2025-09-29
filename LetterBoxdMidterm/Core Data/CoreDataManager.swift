@@ -16,7 +16,7 @@ struct UserStruct {
     var email : String
     var password : String
     var favMovies : [FavoriteMovies]
-//    var watchlist
+
 }
 
 

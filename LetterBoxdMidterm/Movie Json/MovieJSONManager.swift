@@ -29,5 +29,15 @@ class MovieJSONManager {
         return allSections
     }
     
-//    func getThePoster(
+    func getTheMovie(movieName : String) -> Movie {
+        var selectedMovie : Movie = .init(name: "", cast: [], poster: "", duration: "", image: "", director: "", year: "", description: "")
+        for section in allSections {
+            if let movie = section.movies.first(where: { $0.name == movieName}) {
+                selectedMovie =  movie
+                print("movie: \(selectedMovie)")
+            }
+        }
+        return selectedMovie
+    }
+    
 }

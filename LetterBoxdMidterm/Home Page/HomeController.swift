@@ -17,6 +17,25 @@ class HomeController: UIViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    
+        let imageView = UIImageView(image: .logo)
+        imageView.contentMode = .scaleAspectFit
+
+        let containerView = UIView()
+        containerView.addSubview(imageView)
+
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            imageView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
+            imageView.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
+            imageView.widthAnchor.constraint(equalToConstant: 100),
+            imageView.heightAnchor.constraint(equalToConstant: 40)
+        ])
+
+        navigationItem.titleView = containerView
+
+        
         helloLabel.text = "Hello , \(username ?? "")"
         outerCollectionView.delegate = self
         outerCollectionView.dataSource = self

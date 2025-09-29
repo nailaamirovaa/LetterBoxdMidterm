@@ -13,7 +13,11 @@ class ProfileCollectionCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        collectionImage.image = ._12AngryMen
+//        collectionImage.image = ._12AngryMen
+    }
+    
+    func configureCell(image : String) {
+        collectionImage.image = UIImage(named: image)
     }
 
 }

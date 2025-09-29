@@ -19,6 +19,8 @@ class MovieController: UIViewController {
     @IBOutlet weak var addToWatchlistButton: UIButton!
     @IBOutlet weak var castCollection: UICollectionView!
     @IBOutlet weak var addToFavoriteButton: UIButton!
+    @IBOutlet weak var showCastButton: UIButton!
+    
     
     private var movie = Movie(name: "", cast: [], poster: "", duration: "", image: "", director: "", year: "", description: "")
     
@@ -43,10 +45,10 @@ class MovieController: UIViewController {
 
         castCollection.register(UINib(nibName: "CastCell", bundle: nil), forCellWithReuseIdentifier: "CastCell")
         
-        let headerNib = UINib(nibName: "CastCollectionHeader", bundle: nil)
-        castCollection.register(headerNib,
-                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
-                                withReuseIdentifier: "CastCollectionHeader")
+//        let headerNib = UINib(nibName: "CastCollectionHeader", bundle: nil)
+//        castCollection.register(headerNib,
+//                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+//                                withReuseIdentifier: "CastCollectionHeader")
         
         let userId = UserDefaults.standard.string(forKey: "username")
         coreDataManager.fetchFavorites(for: userId ?? "")
@@ -60,6 +62,11 @@ class MovieController: UIViewController {
         addtoFavoritesButtonConfigure()
     }
     
+    
+    @IBAction func showCastButtonTapped(_ sender: UIButton) {
+//        let con
+    }
+    
     @IBAction func addToFavoriteButtonTapped(_ sender: UIButton) {
         
         let userId = UserDefaults.standard.string(forKey: "username")
@@ -68,13 +75,13 @@ class MovieController: UIViewController {
             UserDefaults.standard.set(false, forKey: "\(movie.name)IsAdded")
             coreDataManager.deleteMovie(title: movie.name, userId: userId ?? "")
             addtoFavoritesButtonConfigure()
-            coreDataManager.printFavorites(for: userId ?? "")
+//            coreDataManager.printFavorites(for: userId ?? "")
         } else {
             UserDefaults.standard.set(true, forKey: "\(movie.name)IsAdded")
             coreDataManager.saveFavoriteMovie(movieTitle: movie.name, userId: userId ?? "")
             coreDataManager.fetchFavorites(for: userId ?? "")
             addtoFavoritesButtonConfigure()
-            coreDataManager.printFavorites(for: userId ?? "")
+//            coreDataManager.printFavorites(for: userId ?? "")
         }
     }
     
@@ -129,24 +136,24 @@ extension MovieController: UICollectionViewDelegate , UICollectionViewDataSource
 //        navigationController?.show(controller, sender: nil)
     }
     
-    func collectionView(_ collectionView: UICollectionView,
-                        viewForSupplementaryElementOfKind kind: String,
-                        at indexPath: IndexPath) -> UICollectionReusableView {
-        if kind == UICollectionView.elementKindSectionHeader {
-            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
-                                                                         withReuseIdentifier: "CastCollectionHeader",
-                                                                         for: indexPath) as! CastCollectionHeader
-            header.seeAllButton.addTarget(self, action: #selector(seeAllTapped), for: .touchUpInside)
-            return header
-        }
-        return UICollectionReusableView()
-    }
+//    func collectionView(_ collectionView: UICollectionView,
+//                        viewForSupplementaryElementOfKind kind: String,
+//                        at indexPath: IndexPath) -> UICollectionReusableView {
+//        if kind == UICollectionView.elementKindSectionHeader {
+//            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
+//                                                                         withReuseIdentifier: "CastCollectionHeader",
+//                                                                         for: indexPath) as! CastCollectionHeader
+//            header.seeAllButton.addTarget(self, action: #selector(seeAllTapped), for: .touchUpInside)
+//            return header
+//        }
+//        return UICollectionReusableView()
+//    }
     
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 40)
-    }
+//    func collectionView(_ collectionView: UICollectionView,
+//                        layout collectionViewLayout: UICollectionViewLayout,
+//                        referenceSizeForHeaderInSection section: Int) -> CGSize {
+//        return CGSize(width: collectionView.frame.width, height: 40)
+//    }
     
     @objc func seeAllTapped() {
 //        let fullCastVC = FullCastViewController()

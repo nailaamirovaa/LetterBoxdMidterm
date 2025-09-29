@@ -18,10 +18,8 @@ class SearchController: UIViewController, UISearchResultsUpdating {
     
     private var collectionView : UICollectionView!
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
-      //  view.backgroundColor = .background
         title = "Search"
         getData()
         setUpSearchController()
@@ -69,9 +67,7 @@ class SearchController: UIViewController, UISearchResultsUpdating {
     private func setUpSearchController() {
         searchController.searchBar.placeholder = "Search movies..."
         searchController.searchResultsUpdater = self
-//        searchController.obscuresBackgroundDuringPresentation = false
         navigationItem.searchController = searchController
-//        definesPresentationContext = true
     }
     
     func updateSearchResults(for searchController: UISearchController) {
@@ -115,11 +111,9 @@ class SearchController: UIViewController, UISearchResultsUpdating {
     private func searchMovies(for query: String) {
         selectedMovies = allMovies.filter { $0.name.lowercased().contains(query.lowercased())}
         collectionView.reloadData()
+        
     }
-
 }
-
-
 
 extension SearchController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -131,5 +125,19 @@ extension SearchController: UICollectionViewDataSource, UICollectionViewDelegate
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchCell", for: indexPath) as! SearchCell
         cell.configureSearchCell(image: movie.poster, label: movie.name)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if !isSearching {
+            navigateToMovie(movie: allMovies[indexPath.row])
+        } else {
+            navigateToMovie(movie: selectedMovies[indexPath.row])
+        }
+    }
+    
+    func navigateToMovie(movie : Movie) {
+        let controller = storyboard?.instantiateViewController(identifier: "MovieController") as! MovieController
+        controller.getTheMovie(selectedMovie: movie)
+        navigationController?.show(controller, sender: nil)
     }
 }
