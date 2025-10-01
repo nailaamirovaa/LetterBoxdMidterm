@@ -30,7 +30,7 @@ class ProfileController: UIViewController {
         collectionLabel.text = "\(username ?? "")'s Favorite Movies"
         
         signOutButton.layer.cornerRadius = 15
-        profileImage.image = .howToTrainYourDragon
+        profileImage.image = UIImage(named: "godfather_image")
         
         jsonManager.getData()
         userManager.fetchUserItems()

@@ -19,7 +19,7 @@ class CastCell: UICollectionViewCell {
     }
 
     func configureCastCell(image: String , name: String , role: String) {
-        actorImage.image = UIImage(named: "cillian_murphy")
+        actorImage.image = UIImage(named: image)
         actorNameLabel.text = name
         actorRoleLabel.text = role
     }

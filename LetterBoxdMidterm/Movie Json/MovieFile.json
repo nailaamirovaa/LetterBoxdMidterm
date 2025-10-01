@@ -16,7 +16,8 @@
         "director": "Matt Shakman",
         "year": "2025",
         "duration": "135 min",
-        "description": "Marvel Studios’ first Fantastic Four film in the MCU, introducing the iconic team without redoing the origin story."
+        "description": "Marvel Studios’ first Fantastic Four film in the MCU, introducing the iconic team without redoing the origin story.",
+        "trailer": "https://youtu.be/18QQWa5MEcs?si=JUOyAM3RgbtOH4Lc"
       },
       {
         "name": "Mission: Impossible – The Final Reckoning",
@@ -32,7 +33,9 @@
         "director": "Christopher McQuarrie",
         "year": "2025",
         "duration": "145 min",
-        "description": "Tom Cruise returns as Ethan Hunt in the climactic chapter of the Mission Impossible saga."
+        "description": "Tom Cruise returns as Ethan Hunt in the climactic chapter of the Mission Impossible saga.",
+        "trailer": "https://youtu.be/fsQgc9pCyDU?si=UQqGw5UaH2iByyLG"
+        
       },
       {
         "name": "Superman",
@@ -48,7 +51,8 @@
         "director": "James Gunn",
         "year": "2025",
         "duration": "130 min",
-        "description": "The first film in James Gunn’s DC Universe, presenting a younger Superman learning to balance humanity and heroism."
+        "description": "The first film in James Gunn’s DC Universe, presenting a younger Superman learning to balance humanity and heroism.",
+        "trailer": "https://youtu.be/Ox8ZLF6cGM0?si=VQO7k7ktHXjDKSTo"
       },
       {
         "name": "Lilo & Stitch",
@@ -64,7 +68,8 @@
         "director": "Dean Fleischer Camp",
         "year": "2025",
         "duration": "105 min",
-        "description": "A live-action / animated remake of Disney’s 2002 film, reimagined with new supporting roles and effects."
+        "description": "A live-action / animated remake of Disney’s 2002 film, reimagined with new supporting roles and effects.",
+        "trailer": "https://youtu.be/VWqJifMMgZE?si=kU52iKTdo4TsrQRM"
       },
       {
         "name": "How to Train Your Dragon",
@@ -80,7 +85,8 @@
         "director": "TBA",
         "year": "2025",
         "duration": "120 min",
-        "description": "Live-action remake of the animated trilogy, featuring the return of Hiccup and Toothless in full cinematic scale."
+        "description": "Live-action remake of the animated trilogy, featuring the return of Hiccup and Toothless in full cinematic scale.",
+        "trailer": "https://youtu.be/22w7z_lT6YM?si=t-FDiEVTNR3OsGyS"
       }
     ]
   },
@@ -101,7 +107,8 @@
         "director": "TBA",
         "year": "2025",
         "duration": "118 min",
-        "description": "One of the highest grossing films worldwide for 2025, topping global box office."
+        "description": "One of the highest grossing films worldwide for 2025, topping global box office.",
+        "trailer": "https://youtu.be/ETlOSBR92Fs?si=EZPy8r8RFUtPjt8J"
       },
       {
         "name": "A Minecraft Movie",
@@ -117,7 +124,8 @@
         "director": "Jared Hess",
         "year": "2025",
         "duration": "110 min",
-        "description": "Massive box-office success and a big hit among audiences globally."
+        "description": "Massive box-office success and a big hit among audiences globally.",
+        "trailer": "https://youtu.be/wJO_vIDZn-I?si=RDY0k3mICnzYv7QD"
       },
       {
         "name": "Jurassic World: Rebirth",
@@ -133,7 +141,8 @@
         "director": "Gareth Edwards",
         "year": "2025",
         "duration": "140 min",
-        "description": "Another blockbuster of 2025 with large global revenue."
+        "description": "Another blockbuster of 2025 with large global revenue.",
+        "trailer": "https://youtu.be/jan5CFWs9ic?si=Qk4m5eDP7HmDBbpA"
       },
       {
         "name": "Avatar: The Way of Water",
@@ -149,7 +158,8 @@
         "director": "James Cameron",
         "year": "2022",
         "duration": "192 min",
-        "description": "Sequel to Avatar, visually spectacular and one of the top-grossing films worldwide."
+        "description": "Sequel to Avatar, visually spectacular and one of the top-grossing films worldwide.",
+        "trailer": "https://youtu.be/d9MyW72ELq0?si=tGRy7dGv5keKsKHd"
       },
       {
         "name": "Top Gun: Maverick",
@@ -165,7 +175,8 @@
         "director": "Joseph Kosinski",
         "year": "2022",
         "duration": "131 min",
-        "description": "Sequel to the 1986 classic, featuring high-adrenaline aerial sequences."
+        "description": "Sequel to the 1986 classic, featuring high-adrenaline aerial sequences.",
+        "trailer": "https://youtu.be/qSqVVswa420?si=k8a-B-n-1HkravXW"
       }
     ]
   },
@@ -186,7 +197,8 @@
         "director": "Frank Darabont",
         "year": "1994",
         "duration": "142 min",
-        "description": "A timeless story of hope and perseverance, frequently ranked #1 on IMDb."
+        "description": "A timeless story of hope and perseverance, frequently ranked #1 on IMDb.",
+        "trailer": "https://youtu.be/PLl99DlL6b4?si=ydJqa7hhFxhYXWBG"
       },
       {
         "name": "The Godfather",
@@ -202,7 +214,8 @@
         "director": "Francis Ford Coppola",
         "year": "1972",
         "duration": "175 min",
-        "description": "A mafia epic chronicling the rise of the Corleone family."
+        "description": "A mafia epic chronicling the rise of the Corleone family.",
+        "trailer": "https://youtu.be/UaVTIH8mujA?si=nCU8Y9Dt-lQzX67-"
       },
       {
         "name": "The Dark Knight",
@@ -218,7 +231,8 @@
         "director": "Christopher Nolan",
         "year": "2008",
         "duration": "152 min",
-        "description": "One of the most acclaimed superhero films ever, led by Heath Ledger’s legendary performance."
+        "description": "One of the most acclaimed superhero films ever, led by Heath Ledger’s legendary performance.",
+        "trailer": "https://youtu.be/EXeTwQWrcwY?si=xcL5vhNTOUOBfg_K"
       },
       {
         "name": "Schindler's List",
@@ -234,7 +248,8 @@
         "director": "Steven Spielberg",
         "year": "1993",
         "duration": "195 min",
-        "description": "A harrowing yet inspiring portrayal of Oskar Schindler’s rescue of Jews during WWII."
+        "description": "A harrowing yet inspiring portrayal of Oskar Schindler’s rescue of Jews during WWII.",
+        "trailer": "https://youtu.be/mxphAlJID9U?si=d3W5EcvN-JR_nKMy"
       },
       {
         "name": "12 Angry Men",
@@ -250,7 +265,8 @@
         "director": "Sidney Lumet",
         "year": "1957",
         "duration": "96 min",
-        "description": "A tense courtroom drama exploring justice, bias, and morality."
+        "description": "A tense courtroom drama exploring justice, bias, and morality.",
+        "trailer": "https://youtu.be/TEN-2uTi2c0?si=4axmWBalTCsgYaeJ"
       },
       {
         "name": "Pulp Fiction",
@@ -266,7 +282,8 @@
         "director": "Quentin Tarantino",
         "year": "1994",
         "duration": "154 min",
-        "description": "Tarantino’s masterpiece intertwining multiple stories of crime and redemption."
+        "description": "Tarantino’s masterpiece intertwining multiple stories of crime and redemption.",
+        "trailer": "https://youtu.be/s7EdQ4FqbhY?si=CsxRWM-Asva3Rubg"
       },
       {
         "name": "The Lord of the Rings: The Return of the King",
@@ -282,7 +299,8 @@
         "director": "Peter Jackson",
         "year": "2003",
         "duration": "201 min",
-        "description": "Epic conclusion to the Lord of the Rings trilogy, critically acclaimed and awarded 11 Oscars."
+        "description": "Epic conclusion to the Lord of the Rings trilogy, critically acclaimed and awarded 11 Oscars.",
+        "trailer": "https://youtu.be/r5X-hFf6Bwo?si=C8C4g47uuZp5R1Lh"
       }
     ]
   }

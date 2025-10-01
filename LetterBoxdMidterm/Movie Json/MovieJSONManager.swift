@@ -30,7 +30,7 @@ class MovieJSONManager {
     }
     
     func getTheMovie(movieName : String) -> Movie {
-        var selectedMovie : Movie = .init(name: "", cast: [], poster: "", duration: "", image: "", director: "", year: "", description: "")
+        var selectedMovie : Movie = .init(name: "", cast: [], poster: "", duration: "", image: "", director: "", year: "", description: "" , trailer: "")
         for section in allSections {
             if let movie = section.movies.first(where: { $0.name == movieName}) {
                 selectedMovie =  movie

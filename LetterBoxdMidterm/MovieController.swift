@@ -16,13 +16,13 @@ class MovieController: UIViewController {
     @IBOutlet weak var movieDirectorLabel: UILabel!
     @IBOutlet weak var movieDescriptionLabel: UILabel!
     @IBOutlet weak var rateButton: UIButton!
-    @IBOutlet weak var addToWatchlistButton: UIButton!
+    @IBOutlet weak var trailerButton: UIButton!
     @IBOutlet weak var castCollection: UICollectionView!
     @IBOutlet weak var addToFavoriteButton: UIButton!
     @IBOutlet weak var showCastButton: UIButton!
     
     
-    private var movie = Movie(name: "", cast: [], poster: "", duration: "", image: "", director: "", year: "", description: "")
+    private var movie = Movie(name: "", cast: [], poster: "", duration: "", image: "", director: "", year: "", description: "" , trailer: "")
     
     var coreDataManager = CoreDataManager()
     
@@ -32,6 +32,7 @@ class MovieController: UIViewController {
         super.viewDidLoad()
         
 //        print(movie.name)
+        print(movie.trailer)
         
         configureMovieUI(movie: movie)
         
@@ -40,7 +41,7 @@ class MovieController: UIViewController {
         castCollection.delegate = self
         castCollection.dataSource = self
         
-        addToWatchlistButton.layer.cornerRadius = 10
+        trailerButton.layer.cornerRadius = 10
         rateButton.layer.cornerRadius = 10
 
         castCollection.register(UINib(nibName: "CastCell", bundle: nil), forCellWithReuseIdentifier: "CastCell")
@@ -103,7 +104,7 @@ class MovieController: UIViewController {
     }
     
     func addtoFavoritesButtonConfigure() {
-        let isAddedTrue = UserDefaults.standard.bool(forKey: "\(movie.name)IsAdded")
+        let isAddedTrue = coreDataManager.isAdded(movie: movie)
         if isAddedTrue {
             addToFavoriteButton.setImage(UIImage(systemName: "heart.fill" ), for: .normal)
             addToFavoriteButton.tintColor = .red
@@ -133,36 +134,10 @@ extension MovieController: UICollectionViewDelegate , UICollectionViewDataSource
         
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let selectedCategory = menu[indexPath.row]
-//        let controller = storyboard?.instantiateViewController(identifier: "CategoryController") as! CategoryController
-//        controller.category = selectedCategory
-//        navigationController?.show(controller, sender: nil)
-    }
-    
-//    func collectionView(_ collectionView: UICollectionView,
-//                        viewForSupplementaryElementOfKind kind: String,
-//                        at indexPath: IndexPath) -> UICollectionReusableView {
-//        if kind == UICollectionView.elementKindSectionHeader {
-//            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
-//                                                                         withReuseIdentifier: "CastCollectionHeader",
-//                                                                         for: indexPath) as! CastCollectionHeader
-//            header.seeAllButton.addTarget(self, action: #selector(seeAllTapped), for: .touchUpInside)
-//            return header
-//        }
-//        return UICollectionReusableView()
-//    }
-    
-//    func collectionView(_ collectionView: UICollectionView,
-//                        layout collectionViewLayout: UICollectionViewLayout,
-//                        referenceSizeForHeaderInSection section: Int) -> CGSize {
-//        return CGSize(width: collectionView.frame.width, height: 40)
-//    }
-    
-    @objc func seeAllTapped() {
-//        let fullCastVC = FullCastViewController()
-//        navigationController?.pushViewController(fullCastVC, animated: true)
-    }
+    @IBAction func watchTrailer(_ sender: UIButton) {
+//        guard let url = URL(string: movie.trailer) else { return  }
+//        UIApplication.shared.open(url)
+        }
 }
 
 
@@ -170,7 +145,7 @@ extension MovieController {
     
     func configureMovieUI(movie : Movie) {
         
-        backgroundImage.image = UIImage(named: "godfather_image")
+        backgroundImage.image = UIImage(named: movie.image)
 //        print(movie.poster)
         
         moviePosterImage.image = UIImage(named: movie.poster)

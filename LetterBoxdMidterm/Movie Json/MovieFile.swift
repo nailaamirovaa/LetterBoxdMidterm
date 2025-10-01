@@ -21,6 +21,7 @@ struct Movie: Codable {
     var director : String
     var year : String
     var description : String
+    var trailer: String
 }
 
 struct Cast: Codable {

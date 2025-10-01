@@ -145,7 +145,10 @@ class CoreDataManager {
     
     func isAdded(movie: Movie) -> Bool {
         for favorite in userFavorites{
-            if movie.name == favorite.
+            if movie.name == favorite.movieTitle {
+                return true
+            }
         }
+        return false
     }
 }
