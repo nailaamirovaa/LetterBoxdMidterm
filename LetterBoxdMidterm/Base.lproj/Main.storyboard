@@ -36,7 +36,7 @@
                                 </subviews>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="75L-qk-kV6">
-                                <rect key="frame" x="0.0" y="327" width="393" height="170"/>
+                                <rect key="frame" x="20" y="330.33333333333331" width="353" height="170"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="170" id="uUg-8X-99n"/>
@@ -62,7 +62,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dQn-Aq-pv2">
-                                <rect key="frame" x="20.000000000000007" y="527" width="113.66666666666669" height="101"/>
+                                <rect key="frame" x="20.000000000000007" y="530.33333333333337" width="113.66666666666669" height="101"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Hb-Da-PSG">
                                         <rect key="frame" x="0.0" y="0.0" width="113.66666666666667" height="20.333333333333332"/>
@@ -71,7 +71,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjF-jE-bMe">
-                                        <rect key="frame" x="0.0" y="40.333333333333371" width="113.66666666666667" height="20.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="40.333333333333258" width="113.66666666666667" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -84,8 +84,8 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorite Movies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkY-Re-AOM">
-                                <rect key="frame" x="5" y="303" width="147" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorite Movies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkY-Re-AOM">
+                                <rect key="frame" x="5" y="306.33333333333331" width="383" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -94,7 +94,7 @@
                         <viewLayoutGuide key="safeArea" id="WHH-ZG-vEa"/>
                         <color key="backgroundColor" name="backgroundColor"/>
                         <constraints>
-                            <constraint firstItem="75L-qk-kV6" firstAttribute="top" secondItem="k1X-Vg-6q1" secondAttribute="bottom" constant="96.666666666666657" id="7f2-RL-GIR"/>
+                            <constraint firstItem="75L-qk-kV6" firstAttribute="top" secondItem="k1X-Vg-6q1" secondAttribute="bottom" constant="100" id="7f2-RL-GIR"/>
                             <constraint firstItem="dQn-Aq-pv2" firstAttribute="top" secondItem="75L-qk-kV6" secondAttribute="bottom" constant="30" id="Fa5-ow-UW3"/>
                             <constraint firstItem="WHH-ZG-vEa" firstAttribute="trailing" secondItem="sCi-8m-6fe" secondAttribute="trailing" constant="20" id="K5a-Uy-dJS"/>
                             <constraint firstItem="dkY-Re-AOM" firstAttribute="leading" secondItem="WHH-ZG-vEa" secondAttribute="leading" constant="5" id="T9E-FB-l2r"/>
@@ -104,15 +104,17 @@
                             <constraint firstItem="ENh-88-HFs" firstAttribute="top" secondItem="kNv-wM-jPZ" secondAttribute="top" id="eCl-kS-WEN"/>
                             <constraint firstItem="75L-qk-kV6" firstAttribute="top" secondItem="dkY-Re-AOM" secondAttribute="bottom" id="eZA-Qw-OIQ"/>
                             <constraint firstItem="sCi-8m-6fe" firstAttribute="leading" secondItem="WHH-ZG-vEa" secondAttribute="leading" constant="20" id="knU-r9-jhN"/>
-                            <constraint firstItem="WHH-ZG-vEa" firstAttribute="trailing" secondItem="75L-qk-kV6" secondAttribute="trailing" id="nVp-bW-cMO"/>
+                            <constraint firstItem="WHH-ZG-vEa" firstAttribute="trailing" secondItem="75L-qk-kV6" secondAttribute="trailing" constant="20" id="nVp-bW-cMO"/>
                             <constraint firstItem="k1X-Vg-6q1" firstAttribute="top" secondItem="ENh-88-HFs" secondAttribute="bottom" constant="40" id="oLc-1z-5f9"/>
                             <constraint firstItem="ENh-88-HFs" firstAttribute="trailing" secondItem="WHH-ZG-vEa" secondAttribute="trailing" id="oUW-Vk-NQF"/>
                             <constraint firstItem="k1X-Vg-6q1" firstAttribute="centerX" secondItem="kNv-wM-jPZ" secondAttribute="centerX" id="pFT-fC-WaC"/>
-                            <constraint firstItem="75L-qk-kV6" firstAttribute="leading" secondItem="WHH-ZG-vEa" secondAttribute="leading" id="zhv-MR-OvV"/>
+                            <constraint firstItem="dkY-Re-AOM" firstAttribute="centerX" secondItem="kNv-wM-jPZ" secondAttribute="centerX" id="yjx-s1-tqs"/>
+                            <constraint firstItem="75L-qk-kV6" firstAttribute="leading" secondItem="WHH-ZG-vEa" secondAttribute="leading" constant="20" id="zhv-MR-OvV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hLY-iS-mwV"/>
                     <connections>
+                        <outlet property="collectionLabel" destination="dkY-Re-AOM" id="VuJ-ih-QlK"/>
                         <outlet property="emailLabel" destination="rjF-jE-bMe" id="97C-nk-BUU"/>
                         <outlet property="favoriteMoviesCollection" destination="75L-qk-kV6" id="6bA-Gf-drQ"/>
                         <outlet property="favoriteMoviesCountLabel" destination="UMQ-27-Kq8" id="O1k-nQ-g9L"/>
@@ -766,6 +768,9 @@ Tell your friends what’s good.”</string>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQ9-rD-9uS">
                                 <rect key="frame" x="25" y="357" width="106" height="23"/>
                                 <color key="backgroundColor" name="buttonColor"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" link="YES"/>
+                                </accessibility>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="9"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Add To Watchlist">
@@ -889,6 +894,7 @@ Tell your friends what’s good.”</string>
                             <constraint firstItem="LNt-Q2-G0b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rhQ-wN-VYJ"/>
                             <constraint firstItem="CD1-nK-hxA" firstAttribute="top" secondItem="LNt-Q2-G0b" secondAttribute="bottom" id="sa2-v7-bwM"/>
                             <constraint firstItem="sUh-MI-GK8" firstAttribute="leading" secondItem="WhX-mT-P2S" secondAttribute="trailing" constant="20" id="vn4-pV-au7"/>
+                            <constraint firstItem="aw4-oz-vr1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="NS6-qX-NW8" secondAttribute="trailing" constant="8" symbolic="YES" id="xaS-Df-r2b"/>
                             <constraint firstItem="hMO-sW-HVi" firstAttribute="top" secondItem="fQ9-rD-9uS" secondAttribute="bottom" constant="50" id="xyO-S7-wga"/>
                             <constraint firstItem="QYx-yX-fVo" firstAttribute="leading" secondItem="WhX-mT-P2S" secondAttribute="trailing" constant="20" id="z6N-La-UW7"/>
                         </constraints>
@@ -920,7 +926,7 @@ Tell your friends what’s good.”</string>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OZJ-Oa-wcQ">
                                 <rect key="frame" x="0.0" y="118" width="393" height="666"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="backgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zYU-ha-jqP"/>
@@ -932,6 +938,9 @@ Tell your friends what’s good.”</string>
                             <constraint firstItem="OZJ-Oa-wcQ" firstAttribute="top" secondItem="zYU-ha-jqP" secondAttribute="top" id="lej-vF-EkT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="table" destination="OZJ-Oa-wcQ" id="cSU-fn-huf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GwY-FR-uMO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

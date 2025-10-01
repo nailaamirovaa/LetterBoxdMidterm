@@ -8,6 +8,6 @@
         <attribute name="email" optional="YES" attributeType="String"/>
         <attribute name="password" optional="YES" attributeType="String"/>
         <attribute name="username" optional="YES" attributeType="String"/>
-        <relationship name="favMovies" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FavoriteMovies" inverseName="user" inverseEntity="FavoriteMovies"/>
+        <relationship name="favMovies" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FavoriteMovies" inverseName="user" inverseEntity="FavoriteMovies"/>
     </entity>
 </model>

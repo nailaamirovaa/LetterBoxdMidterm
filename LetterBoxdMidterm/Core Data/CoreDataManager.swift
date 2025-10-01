@@ -49,8 +49,8 @@ class CoreDataManager {
         item.password = newUser.password
         
         do {
-            try context.save()
             fetchUserItems()
+            try context.save()
         } catch {
             print(error.localizedDescription)
         }
@@ -102,9 +102,10 @@ class CoreDataManager {
                 favorite.movieTitle = movieTitle
                 favorite.user = user
                 
-                try context.save()
-                
                 fetchFavorites(for: user.username ?? "")
+                //printFavorites(for: user.username ?? "")
+                try context.save()
+                //printFavorites(for: user.username ?? "")
             }
         } catch {
             print(error.localizedDescription)
@@ -139,6 +140,12 @@ class CoreDataManager {
                 let title = fav.movieTitle ?? "Untitled"
                 print("\(index + 1). \(title)")
             }
+        }
+    }
+    
+    func isAdded(movie: Movie) -> Bool {
+        for favorite in userFavorites{
+            if movie.name == favorite.
         }
     }
 }

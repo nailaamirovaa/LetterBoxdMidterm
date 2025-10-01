@@ -16,6 +16,7 @@ class ProfileController: UIViewController {
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var passwordLabel: UILabel!
     @IBOutlet weak var profileDetailsLabel: UILabel!
+    @IBOutlet weak var collectionLabel: UILabel!
     
     var userManager = CoreDataManager()
     var jsonManager = MovieJSONManager()
@@ -26,6 +27,8 @@ class ProfileController: UIViewController {
         super.viewDidLoad()
 
 
+        collectionLabel.text = "\(username ?? "")'s Favorite Movies"
+        
         signOutButton.layer.cornerRadius = 15
         profileImage.image = .howToTrainYourDragon
         
@@ -107,7 +110,7 @@ UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        .init(width: collectionView.bounds.width/4 - 10 , height: collectionView.bounds.height - 30)
+        .init(width: collectionView.bounds.width/4 - 10 , height: collectionView.bounds.height - 50)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

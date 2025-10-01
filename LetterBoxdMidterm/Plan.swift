@@ -23,11 +23,15 @@ import Foundation
  
  7.Add trailer to moviescreen
  
- 8.Cast Controller
+ 8.Cast Controller +
  
  9. from login to home username +
  
  10. choose pattern mvvm
  
- 11. horizontal collection header
+ 11. horizontal collection header +
+ 
+ 12. from search to movie the background photo doesnt fit
  */
+
+

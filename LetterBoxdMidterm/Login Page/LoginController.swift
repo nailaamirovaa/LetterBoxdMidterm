@@ -26,7 +26,7 @@ class LoginController: UIViewController {
         usernameView.layer.cornerRadius = 18
         passwordView.layer.cornerRadius = 18
         userManager.fetchUserItems()
-        userManager.printUserItems()
+//        userManager.printUserItems()
         loginButton.layer.cornerRadius = 15
     }    
 }

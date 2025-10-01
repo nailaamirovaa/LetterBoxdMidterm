@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24128" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,8 +19,8 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Icb-XX-TdN">
                         <rect key="frame" x="15" y="15" width="103" height="128"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SpN-oQ-EYL">
-                        <rect key="frame" x="53.666666666666664" y="152" width="25.666666666666664" height="11"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SpN-oQ-EYL">
+                        <rect key="frame" x="15" y="152" width="103" height="11"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="9"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -33,8 +33,10 @@
                 <constraint firstItem="Icb-XX-TdN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="8ob-JT-MDL"/>
                 <constraint firstItem="SpN-oQ-EYL" firstAttribute="top" secondItem="Icb-XX-TdN" secondAttribute="bottom" constant="9" id="Smq-M3-h6F"/>
                 <constraint firstAttribute="trailing" secondItem="Icb-XX-TdN" secondAttribute="trailing" constant="15" id="UMm-j5-LiL"/>
+                <constraint firstItem="SpN-oQ-EYL" firstAttribute="leading" secondItem="Icb-XX-TdN" secondAttribute="leading" id="dPi-CL-XUz"/>
                 <constraint firstItem="Icb-XX-TdN" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.663212" id="kdN-Rh-ZPU"/>
                 <constraint firstItem="SpN-oQ-EYL" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="lgY-Py-CND"/>
+                <constraint firstItem="SpN-oQ-EYL" firstAttribute="trailing" secondItem="Icb-XX-TdN" secondAttribute="trailing" id="mYf-Nq-CAH"/>
                 <constraint firstItem="Icb-XX-TdN" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="rKv-bW-Ohc"/>
             </constraints>
             <size key="customSize" width="133" height="193"/>

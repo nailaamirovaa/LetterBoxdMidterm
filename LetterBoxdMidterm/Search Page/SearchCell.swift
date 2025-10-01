@@ -14,7 +14,7 @@ class SearchCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+            //cellImage.layer.cornerRadius = 15
     }
     
     var callBack : ((String) -> Void)?

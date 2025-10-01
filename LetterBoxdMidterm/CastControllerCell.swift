@@ -9,7 +9,8 @@ import UIKit
 
 class CastControllerCell: UITableViewCell {
     
-    @IBOutlet weak var castImage: UIImageView!
+    @IBOutlet weak private var castImage: UIImageView!
+    @IBOutlet weak var castLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,6 +21,11 @@ class CastControllerCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func configureCell(image: String , text: String) {
+        castImage.image = UIImage(named: image)
+        castLabel.text = text
     }
     
 }

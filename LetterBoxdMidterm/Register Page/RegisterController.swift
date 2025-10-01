@@ -40,7 +40,7 @@ class RegisterController: UIViewController {
            let password = passwordTextField.text , !password.isEmpty {
             let user : UserStruct = .init(username: username, email: email, password: password, favMovies: [])
             userManager.saveUserItem(newUser: user)
-            userManager.printUserItems()
+//            userManager.printUserItems()
             callBack?(username , password)
             
             if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {

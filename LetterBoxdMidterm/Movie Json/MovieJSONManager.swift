@@ -34,7 +34,7 @@ class MovieJSONManager {
         for section in allSections {
             if let movie = section.movies.first(where: { $0.name == movieName}) {
                 selectedMovie =  movie
-                print("movie: \(selectedMovie)")
+//                print("movie: \(selectedMovie)")
             }
         }
         return selectedMovie

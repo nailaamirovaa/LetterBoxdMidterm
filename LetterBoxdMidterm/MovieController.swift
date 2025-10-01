@@ -64,7 +64,10 @@ class MovieController: UIViewController {
     
     
     @IBAction func showCastButtonTapped(_ sender: UIButton) {
-//        let con
+        let controller = storyboard?.instantiateViewController(identifier: "CastController") as! CastController
+        controller.cast = movie.cast
+        navigationController?.show(controller, sender: nil)
+        
     }
     
     @IBAction func addToFavoriteButtonTapped(_ sender: UIButton) {
@@ -75,13 +78,14 @@ class MovieController: UIViewController {
             UserDefaults.standard.set(false, forKey: "\(movie.name)IsAdded")
             coreDataManager.deleteMovie(title: movie.name, userId: userId ?? "")
             addtoFavoritesButtonConfigure()
-//            coreDataManager.printFavorites(for: userId ?? "")
+
+            //coreDataManager.printFavorites(for: userId ?? "")
         } else {
             UserDefaults.standard.set(true, forKey: "\(movie.name)IsAdded")
-            coreDataManager.saveFavoriteMovie(movieTitle: movie.name, userId: userId ?? "")
             coreDataManager.fetchFavorites(for: userId ?? "")
+            coreDataManager.saveFavoriteMovie(movieTitle: movie.name, userId: userId ?? "")
             addtoFavoritesButtonConfigure()
-//            coreDataManager.printFavorites(for: userId ?? "")
+            //coreDataManager.printFavorites(for: userId ?? "")
         }
     }
     
