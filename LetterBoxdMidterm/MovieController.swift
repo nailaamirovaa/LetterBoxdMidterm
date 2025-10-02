@@ -15,7 +15,6 @@ class MovieController: UIViewController {
 //    @IBOutlet weak var movieDurationLabel: UILabel!
     @IBOutlet weak var movieDirectorLabel: UILabel!
     @IBOutlet weak var movieDescriptionLabel: UILabel!
-    @IBOutlet weak var rateButton: UIButton!
     @IBOutlet weak var trailerButton: UIButton!
     @IBOutlet weak var castCollection: UICollectionView!
     @IBOutlet weak var addToFavoriteButton: UIButton!
@@ -42,7 +41,6 @@ class MovieController: UIViewController {
         castCollection.dataSource = self
         
         trailerButton.layer.cornerRadius = 10
-        rateButton.layer.cornerRadius = 10
 
         castCollection.register(UINib(nibName: "CastCell", bundle: nil), forCellWithReuseIdentifier: "CastCell")
         
@@ -95,10 +93,6 @@ class MovieController: UIViewController {
         movie = selectedMovie
     }
     
-    @IBAction func rateButtonTapped(_ sender: UIButton) {
-        
-    }
-    
     @IBAction func addToWatchlistButtonTapped(_ sender:
                                               UIButton) {
     }
@@ -135,8 +129,8 @@ extension MovieController: UICollectionViewDelegate , UICollectionViewDataSource
     }
     
     @IBAction func watchTrailer(_ sender: UIButton) {
-//        guard let url = URL(string: movie.trailer) else { return  }
-//        UIApplication.shared.open(url)
+        guard let url = URL(string: movie.trailer) else { return  }
+        UIApplication.shared.open(url)
         }
 }
 
